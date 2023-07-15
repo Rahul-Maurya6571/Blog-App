@@ -11,8 +11,9 @@ app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/", Router);
+ const PORT = process.env.PORT || 8080
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
   console.log(`server is running on port ${process.env.PORT}`);
 });
 Connection();
